@@ -1,0 +1,118 @@
+body{
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  padding: 0px;
+  background-color: lightblue;
+  grid-template-rows: repeat(4, 1fr);
+  height: 100vh;
+  width: auto;
+}
+
+.item1 {
+  grid-row: 1;
+  height: 10vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.line {
+  grid-row: 2;
+  height: 2vh;
+  background-color: black;
+}
+
+.item3 {
+  grid-row: 3;
+  height: 85vh;
+  background-color: white;
+}
+
+.item4 {
+  grid-row: 4;
+  height: 3vh;
+  background-color: black;
+}
+
+.logo{
+  grid-column: 1;
+  height: inherit;
+}
+
+.logo img{
+  height: inherit;
+  width: auto;
+}
+
+.menu{
+  grid-column: 2;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.menu img{
+  height: inherit;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drawing{
+  grid-column: 3;
+  height: inherit;
+  display: flex;
+  align-items: end;
+}
+
+.drawing img{
+  height: inherit;
+  width: auto;
+  margin-left: auto;
+}
+
+.index_container{
+  display: grid;
+  padding: 0px;
+  background-color: lavenderblush;
+  grid-template-rows: repeat(6, 1fr);
+  height: 100vh;
+  width: auto;
+}
+
+.about{
+  grid-row: 2;
+  height: 20vh;
+  background-color: white;
+  text-align: center;
+}
+
+.project{
+  grid-row: 3;
+  height: 20vh;
+  background-color: white;
+  text-align: center;
+}
+
+.other{
+  grid-row: 4;
+  height: 20vh;
+  background-color: white;
+  text-align: center;
+  vertical-align: center;
+}
+
+.space1{
+  grid-row: 1;
+  height: 20vh;
+  background-color: white;
+}
+
+.space2{
+  grid-row: 5;
+  height: 20vh;
+  background-color: white;
+}
