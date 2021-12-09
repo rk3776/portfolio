@@ -2,6 +2,22 @@ body{
   margin: 0px;
 }
 
+
+/*CSS Code for Text*/
+a:link{
+  color: black;
+  text-decoration: none;
+}
+
+a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: gray;
+  text-decoration: none;
+}
 .container {
   display: grid;
   padding: 0px;
@@ -11,6 +27,8 @@ body{
   width: auto;
 }
 
+
+/*CSS Grid for Page Formats*/
 .item1 {
   grid-row: 1;
   height: 10vh;
@@ -29,6 +47,9 @@ body{
   grid-row: 3;
   height: 85vh;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item4 {
@@ -37,25 +58,30 @@ body{
   background-color: black;
 }
 
-.logo{
+/*CSS Code for Logos in Pages for Upper Part*/
+.logo a{
   grid-column: 1;
-  height: inherit;
+  height: 10vh;
+  display: flex;
+  align-content: center;
 }
 
 .logo img{
-  height: inherit;
+  padding:10px;
+  height: 7vh;
   width: auto;
 }
 
-.menu{
+.menu a{
   grid-column: 2;
   height: inherit;
   display: flex;
-  align-items: center;
+  align-content: center;
 }
 
 .menu img{
-  height: inherit;
+  padding: 10px;
+  height: 7vh;
   width: auto;
   margin-left: auto;
   margin-right: auto;
@@ -74,6 +100,7 @@ body{
   margin-left: auto;
 }
 
+/*CSS Code for Index*/
 .index_container{
   display: grid;
   padding: 0px;
@@ -83,11 +110,13 @@ body{
   width: auto;
 }
 
+/*CSS Code for Index Pages*/
 .about{
   grid-row: 2;
   height: 20vh;
   background-color: white;
   text-align: center;
+  font-size: 40px
 }
 
 .project{
@@ -95,6 +124,7 @@ body{
   height: 20vh;
   background-color: white;
   text-align: center;
+  font-size: 40px
 }
 
 .other{
@@ -103,6 +133,7 @@ body{
   background-color: white;
   text-align: center;
   vertical-align: center;
+  font-size: 40px
 }
 
 .space1{
@@ -115,4 +146,104 @@ body{
   grid-row: 5;
   height: 20vh;
   background-color: white;
+}
+
+.projectpart{
+  grid-row: 3;
+  display: grid;
+  padding: 150px;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 70px;
+  height: 170vh;
+  background-color: white;
+}
+
+.projectitem{
+  align-self: center;
+  width: 30vw;
+  height: 35vh;
+  background-color: lightblue;
+}
+
+
+.projectitem1{
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: end;
+}
+
+.projectitem2{
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.projectitem3{
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: end;
+}
+
+.projectitem4{
+  grid-row: 4;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.grid-container {
+  width: 60vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  height: 70vh;
+  grid-row: 3;
+  grid-gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.grid-item {
+  width: 20vw;
+  height: 15vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-item img:hover{
+    opacity: 1;
+}
+
+.grid-item img{
+  max-width: 200px;
+  height:inherit;
+  width:inherit;
+  object-fit: contain;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container-art {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
 }
