@@ -1,7 +1,7 @@
 body{
   margin: 0px;
+  cursor: url("images/cursor.png"), default;
 }
-
 
 /*CSS Code for Text*/
 a:link{
@@ -32,6 +32,7 @@ a:hover{
 .item1 {
   grid-row: 1;
   height: 10vh;
+  width: 100vw;
   background-color: white;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -40,21 +41,30 @@ a:hover{
 .line {
   grid-row: 2;
   height: 2vh;
+  width: 100vw;
   background-color: black;
 }
 
 .item3 {
   grid-row: 3;
   height: 85vh;
+  width: 100vw;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.item3 img{
+  width:inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
 .item4 {
   grid-row: 4;
   height: 3vh;
+  width: 100vw;
   background-color: black;
 }
 
@@ -64,12 +74,14 @@ a:hover{
   height: 10vh;
   display: flex;
   align-content: center;
+  cursor: url("images/cursor2.png"), default;
 }
 
 .logo img{
   padding:10px;
   height: 7vh;
   width: auto;
+
 }
 
 .menu a{
@@ -77,6 +89,7 @@ a:hover{
   height: inherit;
   display: flex;
   align-content: center;
+  cursor: url("images/cursor2.png"), default;
 }
 
 .menu img{
@@ -113,27 +126,42 @@ a:hover{
 /*CSS Code for Index Pages*/
 .about{
   grid-row: 2;
+  font-family: "Shadows Into Light";
   height: 20vh;
   background-color: white;
   text-align: center;
-  font-size: 40px
+  font-size: 50px;
+}
+
+.about a{
+  cursor: url("images/cursor2.png"), default;
 }
 
 .project{
   grid-row: 3;
   height: 20vh;
+  font-family: "Shadows Into Light";
   background-color: white;
   text-align: center;
-  font-size: 40px
+  font-size: 50px;
+}
+
+.project a{
+  cursor: url("images/cursor2.png"), default;
 }
 
 .other{
   grid-row: 4;
   height: 20vh;
+  font-family: "Shadows Into Light";
   background-color: white;
   text-align: center;
   vertical-align: center;
-  font-size: 40px
+  font-size: 50px;
+}
+
+.other a{
+  cursor: url("images/cursor2.png"), default;
 }
 
 .space1{
@@ -151,11 +179,14 @@ a:hover{
 .projectpart{
   grid-row: 3;
   display: grid;
-  padding: 150px;
+  padding: 0vw;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 70px;
+  grid-gap: 10vh;
   height: 170vh;
+  width: 100vw;
   background-color: white;
 }
 
@@ -166,29 +197,11 @@ a:hover{
   background-color: lightblue;
 }
 
-
-.projectitem1{
-  grid-row: 1;
-  grid-column: 1;
-  justify-self: end;
-}
-
-.projectitem2{
-  grid-row: 2;
-  grid-column: 2;
-  justify-self: end;
-}
-
-.projectitem3{
-  grid-row: 3;
-  grid-column: 1;
-  justify-self: end;
-}
-
-.projectitem4{
-  grid-row: 4;
-  grid-column: 2;
-  justify-self: end;
+.projectitem img{
+  width: 30vw;
+  height: 35vh;
+  object-fit: cover;
+  cursor: url("images/cursor2.png"), default;
 }
 
 .grid-container {
@@ -246,4 +259,16 @@ a:hover{
   color: white;
   font-size: 35px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px){
+  .projectitem{
+    width: 100vw;
+  }
+  .projectpart{
+    width: 100vw;
+  }
+  .projectpart{
+      grid-template-columns: repeat(1,1fr);
+  }
 }

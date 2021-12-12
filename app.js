@@ -8,9 +8,19 @@ $(".projectitem").each(function(i,item){
 
   if(rowline % 2 == 0)
   {
-    $(item).css("grid-column", 2);
-    $(item).css("justify-self", "start");
+    let widthpixel = $(".container").css("width");
+    let length = widthpixel.length;
+    let width = Number(widthpixel.slice(0, length-2));
 
+    if(width < 400)
+    {
+      $(item).css("grid-column", 1);
+      $(item).css("justify-self", "start");
+    }
+    else{
+      $(item).css("grid-column", 2);
+      $(item).css("justify-self", "start");
+    }
   }
 
   else {
