@@ -1,6 +1,11 @@
 body{
   margin: 0px;
   cursor: url("images/cursor.png"), default;
+  font-family: "Shadows Into Light";
+}
+
+p, h1{
+  font-family: "Shadows Into Light";
 }
 
 /*CSS Code for Text*/
@@ -111,6 +116,47 @@ a:hover{
   height: inherit;
   width: auto;
   margin-left: auto;
+  cursor: url("images/cursor.png"), default;
+}
+
+/*CSS Code for Home Page*/
+.welcome{
+  text-align: center;
+  font-size: 60px;
+  font-family: "Shadows Into Light";
+  color: black;
+  background-color: white;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 5s;
+  outline-color: black;
+  outline-style: solid;
+  outline-width: 3px;
+}
+
+/*CSS Code for About Page*/
+.right{
+  justify-content: center;
+  align-content: center;
+  height: inherit*0.8;
+  width: 40vw;
+  margin: 5vh;
+  object-fit: cover;
+}
+
+.left{
+  justify-content: center;
+  align-content: center;
+  height: inherit*0.8;
+  width: 40vw;
+  margin: 5vh;
+  object-fit: cover;
+  font-family: "Shadows Into Light";
+}
+
+
+.left p{
+  font-size: 1.5vw;
 }
 
 /*CSS Code for Index*/
@@ -149,7 +195,6 @@ a:hover{
 .project a{
   cursor: url("images/cursor2.png"), default;
 }
-
 .other{
   grid-row: 4;
   height: 20vh;
@@ -175,6 +220,8 @@ a:hover{
   height: 20vh;
   background-color: white;
 }
+
+/*CSS Code for Project Page*/
 
 .projectpart{
   grid-row: 3;
@@ -204,62 +251,48 @@ a:hover{
   cursor: url("images/cursor2.png"), default;
 }
 
+
+/*CSS Code for Documentation Page*/
 .grid-container {
   width: 60vw;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
   padding: 10px;
   height: 70vh;
-  grid-row: 3;
   grid-gap: 10px;
-  padding: 10px;
   justify-content: center;
+  align-content: center;
 }
 
 .grid-item {
-  width: 20vw;
+  width: 15vw;
   height: 15vh;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
   padding: 20px;
   text-align: center;
 }
 
 .grid-item img:hover{
     opacity: 1;
+    cursor: url("images/cursor2.png"), default;
 }
 
 .grid-item img{
-  max-width: 200px;
-  height:inherit;
-  width:inherit;
-  object-fit: contain;
+  height: 20vh;
+  width: 15vw;
+  margin-left: auto;
+  object-fit:contain;
 }
 
-/* The expanding image container (positioning is needed to position the close button and the text) */
-.container-art {
-  position: relative;
-  display: none;
+@keyframes example {
+  0%{font-size: 80px}
+  20%{font-size: 60px}
+  40%{font-size: 80px}
+  60%{font-size: 60px}
+  80%{font-size: 80px}
+  100%{font-size: 60px}
 }
 
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
 
 @media screen and (max-width: 400px){
   .projectitem{
@@ -270,5 +303,36 @@ a:hover{
   }
   .projectpart{
       grid-template-columns: repeat(1,1fr);
+  }
+
+  .projectitem img{
+    width:100vw;
+  }
+
+  .left p{
+    font-size: 10px;
+  }
+  .right img{
+    width: 100vw;
+  }
+
+  .left{
+    margin: 0px;
+    width: 80vw;
+  }
+
+  .right{
+    width: 100vw;
+    margin: 0px;
+  }
+  .item3{
+    display: flex;
+    flex-direction:column;
+  }
+
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
   }
 }
